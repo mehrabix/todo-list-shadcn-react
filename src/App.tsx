@@ -1,12 +1,22 @@
+
+import Home from '@/app/'
+import DescriptionPage from '@/app/Description'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import './App.css'
-import { Button } from './components/ui/button'
+import Layout from './Layout'
 
 function App() {
 
   return (
-    <>
-      <Button>Click me</Button>
-    </>
+    <Router>
+   
+        <Layout />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path="/description" element={<DescriptionPage />} />
+      </Routes>
+    </Router>
+
   )
 }
 
